@@ -1,0 +1,6 @@
+export const GET_DATA_REQ = "GET_DATA_REQ"
+export const GET_DATA_SUCCESS = "GET_DATA_SUCCESS"
+export const GET_DATA_FAIL = "GET_DATA_FAIL"
+export const FILTER_DATA = "FILTER_DATA"
+export const SORT_ASC = "acs"
+export const SORT_DESC = "decs"
