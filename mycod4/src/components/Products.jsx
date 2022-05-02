@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsData, sortProducts } from "../Redux/actions";
+import { ProductCard } from "./ProductCard";
 import { Select } from "./Styled";
 import { Grid } from "./Styled";
 
@@ -32,18 +33,11 @@ dispatch(getProductsData())
       </Select>
       <Grid data-testid="products-container">
         {/* iterate data and show each POroduct card */}
-      {data.map((el)=>{
-       return  <div key={el.id}>
-  <h3>{el.title}</h3>
-  <img src={el.image}/>
-  <h3>{el.brand}</h3>
-  <h3>Price : {el.price}</h3>
-      </div>
+      {data.map((item)=>{
+      return <ProductCard item = {item}/>
 
       })}
-     
-
-
+    
       </Grid>
     </>
   );
